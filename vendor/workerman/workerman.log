@@ -1,0 +1,113 @@
+2018-08-21 08:31:29 pid:25603 Workerman[start.php] start in DEBUG mode
+2018-08-21 08:32:16 pid:25603 Workerman[start.php] stopping ...
+2018-08-21 08:32:16 pid:25603 Workerman[start.php] has been stopped
+2018-08-21 08:32:49 pid:25612 Workerman[start.php] status 
+2018-08-21 08:32:49 pid:25612 Workerman[start.php] not run
+2018-08-21 08:34:46 pid:25631 Workerman[start.php] start in DEBUG mode
+2018-08-21 08:36:26 pid:25631 Workerman[start.php] stopping ...
+2018-08-21 08:36:26 pid:25631 Workerman[start.php] has been stopped
+2018-08-21 08:36:57 pid:25640 Workerman[start.php] start in DAEMON mode
+2018-08-21 09:03:26 pid:25692 Workerman[start.php] status 
+2018-08-21 15:43:29 pid:26727 Workerman[start.php] stop 
+2018-08-21 15:43:29 pid:26727 Workerman[start.php] is stopping ...
+2018-08-21 15:43:29 pid:25642 Workerman[start.php] stopping ...
+2018-08-21 15:43:29 pid:25642 Workerman[start.php] has been stopped
+2018-08-21 15:43:29 pid:26727 Workerman[start.php] stop success
+2018-08-21 16:26:18 pid:27035 Workerman[start.php] start in DAEMON mode
+2018-08-21 16:27:52 pid:27147 Workerman[start.php] stop 
+2018-08-21 16:27:52 pid:27147 Workerman[start.php] is stopping ...
+2018-08-21 16:27:52 pid:27037 Workerman[start.php] stopping ...
+2018-08-21 16:27:52 pid:27037 Workerman[start.php] has been stopped
+2018-08-21 16:27:52 pid:27147 Workerman[start.php] stop success
+2018-08-21 16:56:41 pid:10525 Workerman[start.php] start in DAEMON mode
+2018-08-21 17:23:11 pid:10528 PDOException: SQL:INSERT INTO `chat` ( `room_id`,`msg`) VALUES ( :room_id,:msg) SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x99\x83\xF0\x9F...' for column 'msg' at row 1 in /var/www/minlove/Applications/chat/Connection.php:1772
+Stack trace:
+#0 /var/www/minlove/Applications/chat/Connection.php(1830): Workerman\MySQL\Connection->execute('INSERT INTO `ch...', Array)
+#1 /var/www/minlove/Applications/chat/Events.php(170): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"send",...')
+#3 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"send",...')
+#4 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /var/www/minlove/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #47)
+#7 /var/www/minlove/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#8 /var/www/minlove/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#9 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /var/www/minlove/vendor/workerman/workerman/Worker.php(1360): GatewayWorker\BusinessWorker->run()
+#11 /var/www/minlove/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /var/www/minlove/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /var/www/minlove/vendor/workerman/workerman/Worker.php(478): Workerman\Worker::forkWorkers()
+#14 /var/www/minlove/start.php(37): Workerman\Worker::runAll()
+#15 {main}
+2018-08-21 17:23:11 pid:10528 Worker[10528] process terminated
+2018-08-21 17:23:11 pid:10527 worker[YourAppBusinessWorker:10528] exit with status 64000
+2018-08-21 18:35:42 pid:10596 PDOException: SQL:INSERT INTO `chat` ( `room_id`,`msg`) VALUES ( :room_id,:msg) SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x98\x8A' for column 'msg' at row 1 in /var/www/minlove/Applications/chat/Connection.php:1772
+Stack trace:
+#0 /var/www/minlove/Applications/chat/Connection.php(1830): Workerman\MySQL\Connection->execute('INSERT INTO `ch...', Array)
+#1 /var/www/minlove/Applications/chat/Events.php(170): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"send",...')
+#3 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"send",...')
+#4 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /var/www/minlove/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #48)
+#7 /var/www/minlove/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#8 /var/www/minlove/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#9 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /var/www/minlove/vendor/workerman/workerman/Worker.php(1360): GatewayWorker\BusinessWorker->run()
+#11 /var/www/minlove/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /var/www/minlove/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /var/www/minlove/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /var/www/minlove/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /var/www/minlove/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /var/www/minlove/start.php(37): Workerman\Worker::runAll()
+#17 {main}
+2018-08-21 18:35:42 pid:10596 Worker[10596] process terminated
+2018-08-21 18:35:42 pid:10527 worker[YourAppBusinessWorker:10596] exit with status 64000
+2018-08-21 18:52:33 pid:10936 PDOException: SQL:INSERT INTO `chat` ( `room_id`,`msg`) VALUES ( :room_id,:msg) SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x98\x81' for column 'msg' at row 1 in /var/www/minlove/Applications/chat/Connection.php:1772
+Stack trace:
+#0 /var/www/minlove/Applications/chat/Connection.php(1830): Workerman\MySQL\Connection->execute('INSERT INTO `ch...', Array)
+#1 /var/www/minlove/Applications/chat/Events.php(170): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"send",...')
+#3 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"send",...')
+#4 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /var/www/minlove/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #49)
+#7 /var/www/minlove/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#8 /var/www/minlove/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#9 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /var/www/minlove/vendor/workerman/workerman/Worker.php(1360): GatewayWorker\BusinessWorker->run()
+#11 /var/www/minlove/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /var/www/minlove/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /var/www/minlove/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /var/www/minlove/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /var/www/minlove/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /var/www/minlove/start.php(37): Workerman\Worker::runAll()
+#17 {main}
+2018-08-21 18:52:33 pid:10936 Worker[10936] process terminated
+2018-08-21 18:52:33 pid:10527 worker[YourAppBusinessWorker:10936] exit with status 64000
+2018-08-21 18:53:36 pid:11030 PDOException: SQL:INSERT INTO `chat` ( `room_id`,`msg`) VALUES ( :room_id,:msg) SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x98\x82\xF0\x9F...' for column 'msg' at row 1 in /var/www/minlove/Applications/chat/Connection.php:1772
+Stack trace:
+#0 /var/www/minlove/Applications/chat/Connection.php(1830): Workerman\MySQL\Connection->execute('INSERT INTO `ch...', Array)
+#1 /var/www/minlove/Applications/chat/Events.php(170): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"send",...')
+#3 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"send",...')
+#4 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /var/www/minlove/vendor/workerman/workerman/Connection/TcpConnection.php(650): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#6 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #50)
+#7 /var/www/minlove/vendor/workerman/workerman/Events/Select.php(289): call_user_func_array(Array, Array)
+#8 /var/www/minlove/vendor/workerman/workerman/Worker.php(2235): Workerman\Events\Select->loop()
+#9 /var/www/minlove/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#10 /var/www/minlove/vendor/workerman/workerman/Worker.php(1360): GatewayWorker\BusinessWorker->run()
+#11 /var/www/minlove/vendor/workerman/workerman/Worker.php(1192): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#12 /var/www/minlove/vendor/workerman/workerman/Worker.php(1166): Workerman\Worker::forkWorkersForLinux()
+#13 /var/www/minlove/vendor/workerman/workerman/Worker.php(1494): Workerman\Worker::forkWorkers()
+#14 /var/www/minlove/vendor/workerman/workerman/Worker.php(1443): Workerman\Worker::monitorWorkersForLinux()
+#15 /var/www/minlove/vendor/workerman/workerman/Worker.php(480): Workerman\Worker::monitorWorkers()
+#16 /var/www/minlove/start.php(37): Workerman\Worker::runAll()
+#17 {main}
+2018-08-21 18:53:36 pid:11030 Worker[11030] process terminated
+2018-08-21 18:53:36 pid:10527 worker[YourAppBusinessWorker:11030] exit with status 64000
+2018-08-22 12:05:44 pid:13320 Workerman[start.php] stop 
+2018-08-22 12:05:44 pid:13320 Workerman[start.php] is stopping ...
+2018-08-22 12:05:44 pid:10527 Workerman[start.php] stopping ...
+2018-08-22 12:05:44 pid:10527 Workerman[start.php] has been stopped
+2018-08-22 12:05:44 pid:13320 Workerman[start.php] stop success
