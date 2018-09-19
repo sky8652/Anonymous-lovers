@@ -42,7 +42,7 @@ class Events
     public static function onWorkerStart($businessWorker)
     {
         global $db;
-        $db = new \Workerman\MySQL\Connection("127.0.0.1", 3306, "root", "liang1395..", "minlove");
+        $db = new \Workerman\MySQL\Connection("localhost", 3306, "username", "password", "dbname");
 
         // 初始化
         global $boy_waiting;
