@@ -8,3 +8,9 @@
 3. 运行start_for_win.bat 运行服务器。系统环境变量要有PHP的环境变量，否则会出错。 框架：http://doc2.workerman.net/326102
 4. 修改client文件夹中的clinet.js文件的第一行，var wsUri = "ws://120.79.53.156:8282";，改为你服务器的地址和端口8282
 5. 修改client文件夹中的connect.php，配置好客户端的服务器连接
+
+联系邮箱：1476982312@qq.com
+开发者：广科大平兄
+平兄博客地址：https://pingxonline.com/
+二次开发者：犯二青年
+犯二青年博客：https://fanerblog.xin/
