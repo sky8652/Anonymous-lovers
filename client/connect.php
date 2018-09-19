@@ -10,10 +10,10 @@
 		public $link = "";
 		function __construct()
 		{
-			 $host = '47.95.208.16';
-			 $user = 'root';
-			 $pass = 'liang1395..';
-			 $db_name = 'minlove';
+			 $host = '127.0.0.1';
+			 $user = 'username';
+			 $pass = 'password';
+			 $db_name = '';
 			 $timezone="Asia/Shanghai";
 
 			if ($link = mysqli_connect($host,$user,$pass)) {
