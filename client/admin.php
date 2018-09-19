@@ -7,7 +7,7 @@
  */
 session_start();
 
-$conn=mysqli_connect("localhost","root","liang1395..","minlove");
+$conn=mysqli_connect("localhost","username","password","dbname");
 
 mysqli_query($conn,"set names utf8");
 
