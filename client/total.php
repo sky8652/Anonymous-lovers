@@ -2,7 +2,7 @@
 
 
 
-$conn=mysqli_connect("localhost","root","liang1395..","minlove");
+$conn=mysqli_connect("localhost","","","");
 
 mysqli_query($conn,"set names utf8");
 
