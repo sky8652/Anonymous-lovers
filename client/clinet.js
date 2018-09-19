@@ -1,4 +1,4 @@
-var wsUri = "ws://47.95.208.16:8282";
+var wsUri = "ws://127.0.0.1:8282";
 var websocket = null;
 var gender = null;
 var heart_beat_id = null;
