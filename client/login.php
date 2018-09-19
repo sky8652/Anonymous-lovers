@@ -12,7 +12,7 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == 1){
 }
 
 if (isset($_POST['username'])){
-    if ($_POST['username'] == "yiban" && $_POST['password'] == 'yb2016..'){
+    if ($_POST['username'] == "admin" && $_POST['password'] == 'admin'){
         $_SESSION['login'] = 1;
         header("Location: admin.php");
     }else{
