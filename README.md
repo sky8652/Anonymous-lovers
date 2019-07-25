@@ -23,4 +23,4 @@
 1. 开发者：广科大平兄
 平兄博客地址：https://pingxonline.com/
 2. 二次开发者：犯二青年
-犯二青年博客：https://fanerblog.xin/
+犯二青年博客：https://findcat.cn/
